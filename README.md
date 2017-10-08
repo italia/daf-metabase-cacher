@@ -29,14 +29,16 @@ iterates over the various plots, takes a screenshot, and caches them.
     ```bash
     docker pull ubermuda/screenshot
     ```
-    
 3. Create .env file and edit it setting che correct URL to capture
-3. Manually get screen of websites
     ```bash
     cp .env_example .env
     ```
-4. Open the dashboard in your web browser Ex. http://localhost/daf-metabase-cacher/
-5. Automation: 
+4. Manually get screen of websites
+    ```bash
+    ./screenshot.sh
+    ```
+5. Open the dashboard in your web browser Ex. http://localhost/daf-metabase-cacher/
+6. Automation: 
 
 To make new screenshot, insert script 'screenshot.sh' into your cron service once a day 
 
