@@ -2,7 +2,7 @@
 $dir = strtolower($_REQUEST['dir']);
 header("Access-Control-Allow-Origin: *");
 $result = array();
-$path = '../screenshots'.($dir ? '/' . $dir : '');
+$path = '../result'.($dir ? '/' . $dir : '');
 $files = getDirContents($path);
 
 if ($files) {
