@@ -29,7 +29,7 @@ iterates over the various plots, takes a screenshot, and caches them.
     ```bash
     ./html2pdf.it.sh
     ```
-3. Manually get screen of websites to create the result data 
+3. Manually get screen of websites
     ```bash
     ./cron.sh
     ```
@@ -52,4 +52,3 @@ Powered by the developer team of [`Olomedia`](http://www.olomedia.com)
 * Marcello Vetro
 * Fabio Pileri
 * Emilio Bellomo
-
