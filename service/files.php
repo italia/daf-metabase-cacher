@@ -21,12 +21,19 @@ function getDirContents($dir, &$results = array()) {
     foreach($files as $key => $value){
         $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
         if(!is_dir($path)) {
-            $results[] = $path;
+            if (in_array(path_parts($path, 'extension'), array('jpg', 'jpeg', 'png'))) {
+                $results[] = $path;
+            }
         } else if($value != "." && $value != "..") {
             getDirContents($path, $results);
-            $results[] = $path;
+            //$results[] = $path;
         }
     }
-    //$results = array_diff($results, array('.', '..'));
     return $results;
+}
+
+// filter only images
+function path_parts($path, $parts = '') {
+    $path_parts = pathinfo($path);
+    return $path_parts[$parts];
 }
