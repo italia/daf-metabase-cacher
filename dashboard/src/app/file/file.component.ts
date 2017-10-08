@@ -1,6 +1,5 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { Modal } from 'angular2-modal/plugins/bootstrap';
+import {Component, OnInit, ViewContainerRef} from '@angular/core';
+import { Modal, BSModalContext } from 'angular2-modal/plugins/bootstrap';
 /**
  * importo la classe FileService per gestire le richieste al server
  */
@@ -27,7 +26,7 @@ export class FileComponent implements OnInit {
 
     route: ActivatedRoute;
 
-    constructor( private _router: Router, private _route: ActivatedRoute, private fileService: FileService, public modal: Modal) {
+    constructor(private _route: ActivatedRoute, private fileService: FileService, public modal: Modal) {
         this.route = _route;
     }
 

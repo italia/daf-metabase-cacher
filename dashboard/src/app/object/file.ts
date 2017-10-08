@@ -1,3 +1,3 @@
 export class File {
-    filename: string;
+    image: string;
 }

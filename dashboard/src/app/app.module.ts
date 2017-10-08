@@ -9,6 +9,7 @@ import {HttpModule} from "@angular/http";
 
 import {FormsModule} from "@angular/forms";
 import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ModalModule } from 'angular2-modal';
     BrowserModule,
       HttpModule,
       FormsModule,
-      ModalModule,
+      ModalModule.forRoot(),
+      BootstrapModalModule,
       RouterModule.forRoot([
               {
                   path: '',
