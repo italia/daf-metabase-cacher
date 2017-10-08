@@ -1,0 +1,46 @@
+<main>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img class="pull-left app-logo" src="https://developers.italia.it/assets/icons/logo-it.png">
+                <h1 class="pull-left app-title">Daf Metabase</h1>
+            </div>
+
+            <div class="collapse navbar-collapse">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="page-title-mobile"><h2>Files List</h2></div>
+
+        <div class="row">
+            <div class="file-container col-md-12">
+                <div class="file-table table-responsive">
+                    <table class="table table-striped table-condensed table-bordered">
+                        <thead>
+                        <tr>
+                            <th class="sortable">File</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let file of files" class="item">
+                            <td>
+                                <a href="#" (click)="openModal(file.image)">
+                                    {{baseName(file.image)}}
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
