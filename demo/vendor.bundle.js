@@ -1969,9 +1969,9 @@ var ModalModule = /*@__PURE__*/(function () {
 /* unused harmony export OneButtonPresetBuilder */
 /* unused harmony export TwoButtonPresetBuilder */
 /* unused harmony export PromptPresetBuilder */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Modal$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Modal$1; });
 /* unused harmony export bootstrap4Mode */
-/* unused harmony export BootstrapModalModule */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BootstrapModalModule; });
 /* unused harmony export providers */
 /* unused harmony export ɵa */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular2_modal__ = __webpack_require__("../../../../angular2-modal/bundle/angular2-modal.es5.js");

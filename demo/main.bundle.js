@@ -117,12 +117,14 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_modal__ = __webpack_require__("../../../../angular2-modal/bundle/angular2-modal.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_modal_plugins_bootstrap__ = __webpack_require__("../../../../angular2-modal/plugins/bootstrap/bundle/angular2-modal-bootstrap.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -147,7 +149,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_8_angular2_modal__["e" /* ModalModule */],
+            __WEBPACK_IMPORTED_MODULE_8_angular2_modal__["e" /* ModalModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_9_angular2_modal_plugins_bootstrap__["a" /* BootstrapModalModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_router__["d" /* RouterModule */].forRoot([
                 {
                     path: '',
@@ -174,7 +177,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/file/file.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main>\n    <div class=\"navbar navbar-default\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <img class=\"pull-left app-logo\" src=\"https://developers.italia.it/assets/icons/logo-it.png\">\n                <h1 class=\"pull-left app-title\">Daf Metabase</h1>\n            </div>\n\n            <div class=\"collapse navbar-collapse\">\n\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n\n        <div class=\"page-title-mobile\"><h2>Files List</h2></div>\n\n        <div class=\"row\">\n            <div class=\"file-container col-md-12\">\n                <div class=\"file-table table-responsive\">\n                    <table class=\"table table-striped table-condensed table-bordered\">\n                        <thead>\n                        <tr>\n                            <th class=\"sortable\">File</th>\n                        </tr>\n                        </thead>\n                        <tbody>\n                        <tr *ngFor=\"let file of files\" class=\"item\">\n                            <td>\n                                <a href=\"#\" (click)=\"openModal(file.filename)\">\n                                    {{baseName(file.filename)}}\n                                </a>\n                            </td>\n                        </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n\n\n\n\n\n"
+module.exports = "<main>\n    <div class=\"navbar navbar-default\">\n        <div class=\"container-fluid\">\n            <div class=\"navbar-header\">\n                <img class=\"pull-left app-logo\" src=\"https://developers.italia.it/assets/icons/logo-it.png\">\n                <h1 class=\"pull-left app-title\">Daf Metabase</h1>\n            </div>\n\n            <div class=\"collapse navbar-collapse\">\n\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n\n        <div class=\"page-title-mobile\"><h2>Files List</h2></div>\n\n        <div class=\"row\">\n            <div class=\"file-container col-md-12\">\n                <div class=\"file-table table-responsive\">\n                    <table class=\"table table-striped table-condensed table-bordered\">\n                        <thead>\n                        <tr>\n                            <th class=\"sortable\">File</th>\n                        </tr>\n                        </thead>\n                        <tbody>\n                        <tr *ngFor=\"let file of files\" class=\"item\">\n                            <td>\n                                <a href=\"#\" (click)=\"openModal(file.image)\">\n                                    {{baseName(file.image)}}\n                                </a>\n                            </td>\n                        </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</main>\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -204,8 +207,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var FileComponent = (function () {
-    function FileComponent(_router, _route, fileService, modal) {
-        this._router = _router;
+    function FileComponent(_route, fileService, modal) {
         this._route = _route;
         this.fileService = fileService;
         this.modal = modal;
@@ -254,10 +256,10 @@ FileComponent = __decorate([
      * Componente principale della pagina file
      */
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_file_service__["a" /* FileService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_file_service__["a" /* FileService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_modal_plugins_bootstrap__["a" /* Modal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_modal_plugins_bootstrap__["a" /* Modal */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_file_service__["a" /* FileService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_file_service__["a" /* FileService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_modal_plugins_bootstrap__["b" /* Modal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_modal_plugins_bootstrap__["b" /* Modal */]) === "function" && _c || Object])
 ], FileComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=file.component.js.map
 
 /***/ }),
