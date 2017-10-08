@@ -25,18 +25,18 @@ iterates over the various plots, takes a screenshot, and caches them.
     cd daf-metabase-cacher
     ```
     
-2. Install html2pdf.it
+2. Download microservice Docker Image
     ```bash
-    ./html2pdf.it.sh
+    docker pull ubermuda/screenshot
     ```
 3. Manually get screen of websites
     ```bash
-    ./cron.sh
+    ./screenshot.sh
     ```
 4. Open the dashboard in your web browser Ex. http://localhost/daf-metabase-cacher/
 5. Automation: 
 
-To update periodically the data, insert script 'cron.sh' into your cron service once a day 
+To make new screenshot, insert script 'screenshot.sh' into your cron service once a day 
 
 ## Contribute and build update
 
