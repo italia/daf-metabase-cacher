@@ -50,9 +50,12 @@ To make new screenshot, insert script 'screenshot.sh' into your cron service onc
     ./build.sh
     ```
 
-# Credits
+# Credits & Demo Dashboard
 
 Powered by the developer team of [`Olomedia`](http://www.olomedia.com)
 * Marcello Vetro
 * Fabio Pileri
 * Emilio Bellomo
+
+You can see a Demo Dashboard on https://experiment.olomedia.com/daf-metabase-cacher/ 
+
