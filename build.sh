@@ -1,4 +1,4 @@
-BUILD_DIR=v1
+BUILD_DIR=demo
 RELATIVE_PATH=daf-metabase-cacher
 
 rm -rf $BUILD_DIR
