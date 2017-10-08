@@ -2,3 +2,4 @@
 result
 .env
 dashboard/package-lock.json
+node_modules
