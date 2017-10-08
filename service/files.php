@@ -7,7 +7,7 @@ $files = getDirContents($path);
 
 if ($files) {
     foreach ($files as $key => $f) {
-        $result[] = array("image", $f);
+        $result[] = array("image" => $f);
     }
 }
 $json = json_encode($result);
