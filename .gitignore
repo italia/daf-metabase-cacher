@@ -1,0 +1,8 @@
+.idea/
+target/
+.localenv
+*.iml
+.envrc
+config.properties
+config-docker.properties
+__pycache__
