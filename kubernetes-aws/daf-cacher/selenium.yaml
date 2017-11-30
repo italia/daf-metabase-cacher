@@ -64,4 +64,4 @@ spec:
     targetPort: 5900
     protocol: TCP
   selector:
-    app: daf-metabase-cacher-be
+    app: daf-cacher-selenium
