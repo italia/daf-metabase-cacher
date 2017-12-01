@@ -125,12 +125,14 @@ public class CacheWorker {
                             webDriver.close();
                             webDriver.quit();
                         }
+                    } catch (Exception e) {
+                        // ignored
+                    } finally {
                         maxRequest = REQUEST_RESET_AT;
                         ((SupersetSniperPageImpl) supersetPageHandler).reset();
                         webDriver = getWebDriver(properties, timeout);
-                    } catch (Exception e) {
-                        LOGGER.log(Level.SEVERE, "An error here", e);
                     }
+
                 }
 
 
