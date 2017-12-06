@@ -20,7 +20,7 @@ spec:
               mountPath: /etc/daf-cache/
           env:
             - name: DAF_CACHER_CONFIG_FILE
-              value: "/etc/daf-cache/config-docker.properties"
+              value: "/etc/daf-cache/config.properties"
       imagePullSecrets:
         - name: regsecret
       volumes:
